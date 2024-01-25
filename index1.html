@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GIS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="pic/Css/sty.css">
+<style>
+  .mySlides {display: none}
+  </style>
+</head>
+
+<body id="myPage">
+
+<!-- Sidebar on click 
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav> -->
+<!--slide show
+<div class="w3-content w3-section" style="max-width:2000px">
+  <img class="mySlides" src="https://th.bing.com/th/id/R.b254990dd966ac6c6f94271af24a063d?rik=cB6gUcuhNKYjwg&pid=ImgRaw&r=0" style="width:100%">
+  <img class="mySlides" src="https://le-cdn.hibuwebsites.com/94c11a20748e4252aecbf72e8cf7653a/dms3rep/multi/opt/14508889-1920w.jpg" style="width:100%">
+  <img class="mySlides" src="https://th.bing.com/th/id/R.399471009a4f7e34d06559ce6d333beb?rik=x5O84C5TmTBAAw&pid=ImgRaw&r=0" style="width:100%">
+</div> -->
+   <!-- Automatic Slideshow Images -->
+   <div class="mySlides w3-display-container w3-center">
+    <img src="https://th.bing.com/th/id/R.b254990dd966ac6c6f94271af24a063d?rik=cB6gUcuhNKYjwg&pid=ImgRaw&r=0" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://le-cdn.hibuwebsites.com/94c11a20748e4252aecbf72e8cf7653a/dms3rep/multi/opt/14508889-1920w.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="https://th.bing.com/th/id/R.4247b6802ca010a97611de67900d8881?rik=MN%2ft4NVKAyR4hA&riu=http%3a%2f%2fleica-geosystems.com%2f-%2fmedia%2fimages%2fleicageosystems%2fproducts%2flaser_scanners%2f800x428_thumbnail_portlet_callout%2fleica-cyclone-3dr-touch-mode-thumbnail-image-800x428.ashx&ehk=qtErUjQXU1pg2Kkt60zGjVxfww86lGNlm%2f2zdQ%2fuylE%3d&risl=&pid=ImgRaw&r=0" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      
+    </div>
+  </div>
+
+  
+  <!--N Navbar-->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index1.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Gis</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <!--<button class="w3-padding-large w3-button" title="More">Production <i class="fa fa-caret-down"></i></button>    --> 
+       <!-- <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Total Staion</a> 
+          <h25> <a href="#" class="w3-bar-item w3-button">TS03</a>
+          <a href="#" class="w3-bar-item w3-button">TS07</a>
+          <a href="#" class="w3-bar-item w3-button">TS10</a>
+          <a href="#" class="w3-bar-item w3-button">TS13</a>
+          <a href="#" class="w3-bar-item w3-button">TS16</a>
+          <a href="#" class="w3-bar-item w3-button">TS60</a>
+          <a href="#" class="w3-bar-item w3-button">TM50</a>
+          <a href="#" class="w3-bar-item w3-button">MS60</a> </h25> 
+
+          <a href="#" class="w3-bar-item w3-button">GNSS System</a>
+          <a href="#" class="w3-bar-item w3-button">Digital Levels</a>
+          <a href="#" class="w3-bar-item w3-button">Laser Scanners</a>
+          <a href="#" class="w3-bar-item w3-button">Solftwares</a>
+          <a href="#" class="w3-bar-item w3-button">Gis Collectors</a>
+          <a href="#" class="w3-bar-item w3-button">DISSTO</a>
+        </div> --> 
+        <button class="w3-button w3-black">Productions</button>
+      
+        
+      <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey" id="myDIV">
+          <input class="w3-input w3-padding" type="text" placeholder="Search.." id="myInput" onkeyup="myFunction()">
+          
+          <a href="#" class="w3-bar-item w3-button">Total Station</a>
+          <a href="#" class="w3-bar-item w3-button">GNSS Systems</a>
+          <a href="#" class="w3-bar-item w3-button">Digital Levels</a>
+          <a href="#" class="w3-bar-item w3-button">Laser Scanners</a>
+          <a href="#" class="w3-bar-item w3-button">Solftwares</a>
+          <a href="#" class="w3-bar-item w3-button">Gis Collectors</a>
+          <a href="#" class="w3-bar-item w3-button">DISTO™</a>
+        
+        </div>
+        </div> 
+     <a href="Tech.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Technical Service</a>
+     <a href="cont.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About  Us</a>
+       </div>
+      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    </div>
+  </div>
+<!-- Navbar 
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="Gis" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Gis</a>
+  <a href="Solu.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Production</a>
+  <a href="Tech.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Technical Service</a>
+  <a href="cont.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Us</a> -->
+
+  <!--N Navbar
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index1.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Gis</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">Production <i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          
+           
+            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom"></div>
+            <button onclick="myFunction()" class="w3-button w3-black">Total Station</button>
+              <a href="#" class="w3-bar-item w3-button">Link 1</a>
+              <a href="#" class="w3-bar-item w3-button">Link 2</a>
+              <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            
+            </div> 
+            <select name="Total Station" selected="Total Station">
+              <option value="TS03">TS03</option>
+              <option value="TS07">TS07 </option>
+              <option value="TS10">TS10</option>
+              <option value="TS13">TS13</option>
+              <option value="TS16">TS16 </option>
+              <option value="TS60">TS60</option>
+              <option value="MS50">MS50</option>
+              <option value="MS60">MS60 </option>
+            </select>
+           <div> <label for="cars">Total Station:</label>
+            <select name="cars" id="cars">
+              <option value="TS03">TS03</option>
+              <option value="TS07">TS07 </option>
+              <option value="TS10">TS10</option>
+              <option value="TS13">TS13</option>
+              <option value="TS16">TS16 </option>
+              <option value="TS60">TS60</option>
+              <option value="MS50">MS50</option>
+              <option value="MS60">MS60 </option>
+</select>
+</div>
+          <a href="#" class="w3-bar-item w3-button">GNSS System</a>
+          <a href="#" class="w3-bar-item w3-button">Digital Levels</a>
+          <a href="#" class="w3-bar-item w3-button">Laser Scanners</a>
+          <a href="#" class="w3-bar-item w3-button">Solftwares</a>
+          <a href="#" class="w3-bar-item w3-button">Gis Collectors</a>
+          <a href="#" class="w3-bar-item w3-button">DISSTO</a>
+          <div><label for="cars">GNSS System:</label>
+            <select name="cars" id="cars">
+              <option value="GS16">GS16</option>
+              <option value="GS18">GS18 </option>
+              <option value="CS20">CS20</option>
+              
+</select>
+</div>
+
+<div>
+  <label for="cars">Digital Levels:</label>
+  <select name="cars" id="cars">
+    <option value="LS10">LS10</option>
+    <option value="LS15">LS15 </option>  
+</select>
+</div>
+
+
+        </div> 
+        </div>
+     <a href="Tech.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Technical Service</a>
+     <a href="cont.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Us</a>
+       </div>
+      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    </div>
+  </div> -->
+
+  
+<!-- 
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+    </div>--> 
+  </div>
+  <!--
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>-->
+
+  <!-- Navbar on small screens 
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#อิงฟ้า" class="w3-bar-item w3-button">อิงฟ้า</a>
+    <a href="#ฟา" class="w3-bar-item w3-button">ฟา</a>
+    <a href="#พี่มาร์ค" class="w3-bar-item w3-button">พี่มาร์ค</a>
+    <a href="#พี่เสก" class="w3-bar-item w3-button">พี่เสก</a>
+    <a href="พี่เอก" class="w3-bar-item w3-button">พี่เอก</a>
+  </div>-->
+</div>
+<!-- <div class="w3-section w3-bottombar w3-padding-16">
+  <span class="w3-margin-right">Filter:</span> 
+  <button class="w3-button w3-black">Home</button>
+  <button class="w3-button w3-white w3-hide-small"><a href="cont.html">เกี่ยวกับเรา</button></a>
+</div> <-->
+<!-- Image Header -->
+
+<!--<div class="w3-display-container w3-animate-opacity">
+  <img src="pic/img001.png" alt="boat" style="width:8%"> -->
+  
+  <!-- <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+  
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">GEOMATICS</button>
+  </div>
+</div> -->
+
+<!-- Modal -->
+<!-- 
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">GEOMATICS</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>-->
+<div class="w3-panel w3-black">
+  <center><h2  class="w3-opacity">GEOMATICS</h2> </center>
+   
+</div>
+<br>
+<!--<div class="w3-container w3-content w3-center w3-padding-16" style="max-width:1000px" id="band">
+  
+  <h5> <p class="font-family">ตัวแทนขายผลิตภัณฑ์อุปกรณ์สำรวจของ Leica Geosystems จากประเทศสวิตเซอแลนด์ พร้อมให้บริการหลังการขายในประเทศไทยอย่างเป็นทางการ ซึ่งเป็นผู้นำอุปกรณ์สำรวจที่มีความละเอียดถูกต้องสูง อาทิเช่น กล้องสำรวจประมวลผลอัตโนมัติ (Total Station), เครื่องหาค่าพิกัดด้วยสัญญาณดาวเทียม GNSS, กล้องระดับ (Digital Level), เครื่องสแกนเนอร์ 3 มิติ (Laser Scanner), โปรแกรมประมวลผล (Software), เครื่องรังวัดค่าพิกัดแบบพกพาในงานด้านระบบภูมิสารสนเทศ (GIS Collector), เครื่องวัดระยะด้วยแสงเลเซอร์ (Disto)
+ <br>
+     ทั้งนี้ ยังเป็นศูนย์ซ่อมบำรุงอุปกรณ์เครื่องมือสำรวจยี่ห้อ Leica และได้รับมาตรฐานของ Leica Geosystems โดยตรงจากประเทศสวิตเซอแลนด์ พร้อมมีเจ้าหน้าที่ที่ประจำเป็นของตนเองในประเทศไทย
+   </p> </h5>
+     <div class="w3-row w3-padding-32">
+     <div class="w3-third">
+       </div> -->
+ 
+       <div class="w3-panel w3-content w3-center w3-light-grey" style="max: width 1500px">
+        <span style="font-size:45px;line-height:0.6em;opacity:0.2">❝</span>
+        <i> GIS Co., Ltd. is an authorized distributor for sales and sole provider of after-sales service in Thailand for Leica Geosystems, the leader in survey equipment from Switzerland, providing surveying equipment with high resolution, such as Total Stations, GNSS Systems, level camera (Digital Level), Laser Scanner, Processor Software, GIS Collector and Disto.
+          <br>
+          It is also a maintenance center for Leica brand certified by Leica Geosystems directly from Switzerland with own staff in Thailand.</i></p>
+       </div>
+       
+        
+
+ 
+<!-- Team Container -->
+<!--<div class="w3-container w3-padding-64 w3-center" id="team">
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">GEOMATICS</button>
+--> 
+<!--<h5>GEOMATICS</h5> -->
+<br>
+
+<!--<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band"></div>
+<p class="w3-serif">
+ตัวแทนขายผลิตภัณฑ์อุปกรณ์สำรวจของ Leica Geosystems จากประเทศสวิตเซอแลนด์ พร้อมให้บริการหลังการขายในประเทศไทยอย่างเป็นทางการ ซึ่งเป็นผู้นำอุปกรณ์สำรวจที่มีความละเอียดถูกต้องสูง อาทิเช่น กล้องสำรวจประมวลผลอัตโนมัติ (Total Station), เครื่องหาค่าพิกัดด้วยสัญญาณดาวเทียม GNSS, กล้องระดับ (Digital Level), เครื่องสแกนเนอร์ 3 มิติ (Laser Scanner), โปรแกรมประมวลผล (Software), เครื่องรังวัดค่าพิกัดแบบพกพาในงานด้านระบบภูมิสารสนเทศ (GIS Collector), เครื่องวัดระยะด้วยแสงเลเซอร์ (Disto)
+ทั้งนี้ ยังเป็นศูนย์ซ่อมบำรุงอุปกรณ์เครื่องมือสำรวจยี่ห้อ Leica และได้รับมาตรฐานของ Leica Geosystems โดยตรงจากประเทศสวิตเซอแลนด์ พร้อมมีเจ้าหน้าที่ที่ประจำเป็นของตนเองในประเทศไทย:</p>
+</p>
+<div class="w3-row"><br>
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+
+  
+<div class="w3-quarter">
+  <img src="pic/img002.jpg"  style="width:45%" class="w3-squareSize w3-hover-opacity">
+  <h3>Total Station</h3>
+  <p></p>
+</div>
+
+<div class="w3-quarter">
+  <img src="pic/img003.png" alt="Boss" style="width:45%" class="w3-squareSize w3-hover-opacity">
+  <h3>GNSS System</h3>
+  <p></p>
+</div>
+
+<div class="w3-quarter">
+  <img src="/w3images/avatar.jpg"  style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Digital Levels</h3>
+  <p></p>
+</div>
+<p></p>
+
+<div class="w3-quarter">
+  <im<g src="/w3images/avatar.jpg"  style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Laser Scanners</h3>
+  <p></p>
+</div>
+<p></p>
+
+<div class="w3-quarter">
+  <im<g src="/w3images/avatar.jpg"  style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Softwares</h3>
+  <p></p>
+</div>
+<p></p>
+
+
+<div class="w3-quarter">
+  <im<g src="/w3images/avatar.jpg"  style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Gis Collectors</h3>
+  <p></p>
+</div>
+<p></p>
+
+
+<div class="w3-quarter">
+  <im<g src="/w3images/avatar.jpg" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>DISTO</h3>
+  <p></p>
+</div>
+<p></p>
+
+</div>
+</div> -->
+<!-- <div class="w3-container">
+  <div class="w3-dropdown-hover"><img src="pic/img004.png" alt="Total Station" width="300" height="250" class="w3-hover-opacity">
+    <div class="w3-dropdown-content" style="width:300px"><br>
+      <img src="pic/img004.png" alt="Total Station" style="width:100%">
+      
+      <a href="#" class="w3-border">Total Station »</a>
+    </div>
+  </div>
+</div> -->
+
+ <!-- First Photo Grid-->
+ <div class="w3-row-padding w3-center">
+  <div class="w3-third w3-container w3-margin-bottom">
+  <!--<img src="pic/img004.png" alt="" width="300" height="250" class="w3-hover-opacity">-->
+  <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="pic/img004.png" >
+  <a href="TS.html" class="w3-bar-item w3-button w3-white"> <img src="pic/img004.png" alt="" width="300" height="250" class="w3-hover-opacity" >
+    <div class="w3-container w3-white">
+      <br>
+      <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-hover-teal" title="Go To W3.CSS">Total Station</button> -->
+    <!--<p><b>Total Station</b></p>-->
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="Total Station"></i></a>
+    <a href="TS.html" class="w3-bar-item w3-button w3-black"><i></i>Total Station</a>
+
+    </div>
+  </div>
+  <div class="w3-third w3-container w3-margin-bottom">
+      <!-- <img src="https://leica-geosystems.com/-/media/images/leicageosystems/products/thumbnails%20800x428/gnss%20comp%20chart%20thumbnail.ashx?h=428&la=en-GB&w=800&hash=9DB9BC0957337913CC3477766B9502E2" alt="" width="300" height="250" class="w3-hover-opacity">
+      -->
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="pic/img004.png" >
+        <a href="GNSS.html" class="w3-bar-item w3-button w3-white"> <img src="https://leica-geosystems.com/-/media/images/leicageosystems/products/thumbnails%20800x428/gnss%20comp%20chart%20thumbnail.ashx?h=428&la=en-GB&w=800&hash=9DB9BC0957337913CC3477766B9502E2" alt="" width="300" height="250" class="w3-hover-opacity" >
+          <div class="w3-container w3-white">
+          <br>
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="GNSS Systems"></i></a>
+          <a href="GNSS.html" class="w3-bar-item w3-button w3-black"><i></i>GNSS Systems</a>
+          </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+          <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="" >
+          <a href="Digital.html" class="w3-bar-item w3-button w3-white">    <img src="https://smithsurveyingequipment.co.uk/wp-content/uploads/2017/08/LEICA-LS10-DIGITAL-LEVEL-4-1000x1000.jpg" alt="" width="300" height="250" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+<br>    
+<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="" >
+  <a href="Digital.html" class="w3-bar-item w3-button w3-black"><i></i>Digital Levels</a>
+</div>
+    </div>
+  </div>
+<br> 
+
+
+  <!-- Sec Photo Grid--> 
+    
+<div class="w3-row-padding w3-center">
+  <div class="w3-third w3-container w3-margin-bottom">
+  <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="pic/img004.png" >
+  <a href="Laser.html" class="w3-bar-item w3-button w3-white"> <img src="https://globalsurvey.co.nz/wp-content/uploads/2018/06/Leica-RTC360-LT_2_580x580.jpg" alt="" width="300" height="250" class="w3-hover-opacity" >
+    <div class="w3-container w3-white">
+      <br>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="Total Station"></i></a>
+    <a href="Laser.html" class="w3-bar-item w3-button w3-black"><i></i>Laser Scanners</a>
+
+    </div>
+  </div>
+
+  <div class="w3-third w3-container w3-margin-bottom">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="" >
+    <a href="SW.html" class="w3-bar-item w3-button w3-white">    <img src="https://www.giscompany.co.th/wp-content/uploads/2022/04/Rectangle-78.png" alt="" width="300" height="250" class="w3-hover-opacity">
+<div class="w3-container w3-white">
+<br>    
+<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="" >
+<a href="SW.html" class="w3-bar-item w3-button w3-black"><i></i>Solftwares</a>
+</div>
+</div>
+
+<div class="w3-third w3-container w3-margin-bottom">
+  <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="" >
+  <a href="GIS.html" class="w3-bar-item w3-button w3-white">    <img src="https://marvel-b1-cdn.bc0a.com/f00000000246691/www.topconpositioning.com/sites/default/files/dxpr-builder/cutrework_image.jpg?fid=255916" alt="" width="300" height="250" class="w3-hover-opacity">
+<div class="w3-container w3-white">
+<br>    
+<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="" >
+<a href="GIS.html" class="w3-bar-item w3-button w3-black"><i></i>Gis Collectors</a>
+</div>
+</div>
+
+
+
+<div class="w3-third w3-container w3-margin-bottom">
+  <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="" >
+  <a href="DISSTO.html" class="w3-bar-item w3-button w3-white">    <img src="https://www.giscompany.co.th/wp-content/uploads/2022/04/Rectangle-80.png" alt="" width="300" height="250" class="w3-hover-opacity">
+<br>    
+<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="" >
+<a href="DISSTO.html" class="w3-bar-item w3-button w3-black"><i></i>Gis Collectors</a>
+</div>
+</div>
+</div>
+
+<!-- <div class="w3-container">
+  <h2>Image Dropdown</h2>
+  <p>Move the mouse over the image:</p>
+
+  <div class="w3-dropdown-hover"><img src="img_snowtops.jpg" alt="Monterosso" style="width:20%">
+    <div class="w3-dropdown-content" style="width:300px"><br>
+      <img src="img_snowtops.jpg" alt="Norway" style="width:100%">
+      <a href="#" class="w3-border">Visit Norway »</a>
+    </div>
+  </div>
+</div> -->
+
+<!-- Work Row 
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Our Work</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="/w3images/snow.jpg" alt="Snow" style="width:100%">
+  <div class="w3-container">
+  <h3>Customer 1</h3>
+  <h4>Trade</h4>
+  <p>อิงฟ้า</p>
+  <p>อิงฟ้า</p>
+  <p>อิงฟ้า</p>
+  <p>อิงฟ้า</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+  <div class="w3-container">
+  <h3>Customer 2</h3>
+  <h4>ง่วง</h4>
+  <p>ง่วง</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+  <div class="w3-container">
+  <h3>Customer 3</h3>
+  <h4>Trade</h4>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+</div> -->
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+
+
+<!-- Footer -->
+<br>
+<br>
+<br>
+<div class="w3-container w3-teal w3-opacity w3-light-grey">
+  <center><h7><p class="w3-medium">>><a href="file:///C:/Users/farnk/Desktop/intern/VS/cont.html" target="_blank">Contract Us<</a></p> </center>
+  </h7>
+  <center><h7> <li><a class= " fa fa-map-marker">  Address  202 CDG House, Nanglinchi Rd., Chongnonsee,  Yannawa Bangkok, 10120 Thailand <h7></a></li> 
+  </center>
+    <center> <h7> <li><a class="fa fa-phone"> 
+          0 2678 0707, 0 2678 0033 (Hotline)
+          F: 0 2678 0321-3</a></li></h7>   </center>
+          <center> <li><a class="fa fa-home" > gis.contact@cdg.co.th /</a></li> </h7> </center>
+</div>
+<!-- 
+<footer class="w3-container w3-padding-64 w3-center w3-teal w3-opacity w3-light-grey ">
+  <h7><li><a class= " fa fa-map-marker">  Address </a></li> </h7>
+    <br>
+          <p>  202 CDG House, Nanglinchi Rd., Chongnonsee,  Yannawa Bangkok, 10120 Thailand </p>
+    <br>
+          <h7><li><a class="fa fa-phone"> 
+            0 2678 0707, 0 2678 0033 (Hotline)
+    <br>
+            F: 0 2678 0321-3</a></li> </h7>
+            <br>
+         <h7><li><a class="fa fa-home" > gis.contact@cdg.co.th /</a></li> </h7> 
+    
+  <p class="w3-medium">>><a href="file:///C:/Users/farnk/Desktop/intern/VS/cont.html" target="_blank">Contract Us</a></p>
+</footer>  -->
+ 
+<!-- Pricing Row 
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <h2>PRICING</h2>
+    <p>Choose a pricing plan that fits your needs.</p><br>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Basic</p>
+        </li>
+        <li class="w3-padding-16"><b>10GB</b> Storage</li>
+        <li class="w3-padding-16"><b>10</b> Emails</li>
+        <li class="w3-padding-16"><b>10</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme-l2">
+          <p class="w3-xlarge">Pro</p>
+        </li>
+        <li class="w3-padding-16"><b>25GB</b> Storage</li>
+        <li class="w3-padding-16"><b>25</b> Emails</li>
+        <li class="w3-padding-16"><b>25</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 25</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Premium</p>
+        </li>
+        <li class="w3-padding-16"><b>50GB</b> Storage</li>
+        <li class="w3-padding-16"><b>50</b> Emails</li>
+        <li class="w3-padding-16"><b>50</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+</div> -->
+
+
+<!-- Contact Container 
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jjBPj3eHoes?si=s4YQz9qgyNymB7ET" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <br>
+      <h3>Address</h3>
+      <p>Swing by for a cup of coffee, or whatever.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
+    </div> -->
+   
+    <!--
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required> -->
+        <script>
+          // Automatic Slideshow - change image every 4 seconds
+          var myIndex = 0;
+          carousel();
+          
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 4000);    
+          }
+          </script>
+               

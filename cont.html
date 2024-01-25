@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="pic/Css/sty.css">
+</head>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Style the header */
+    header {
+      font-family: Helvetica;
+      background-color: #009688; 
+      opacity: 10;
+      padding: 5px;
+      text-align: center;
+      font-size: 40px; 
+      color: white;
+    }
+    
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+      float: left;
+      width: 30%;
+      height: 550px; /* only for demonstration, should be removed */
+      background: #696969;
+      padding: 20px;
+    
+    }
+    
+    /* Style the list inside the menu */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    article {
+  float: left;
+  padding: 5px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 430px; /* only for demonstration, should be removed */
+}
+   
+    
+    /* Clear floats after the columns */
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Style the footer 
+    footer {
+      background-color: #21B482;
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }*/
+    
+    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+    </style>
+     
+<body id="myPage">
+    
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav> 
+
+
+  <!--N Navbar-->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index1.html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Gis</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">Productions <i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#" class="w3-bar-item w3-button">Total Staion</a>
+            <a href="#" class="w3-bar-item w3-button">GNSS Systems</a>
+            <a href="#" class="w3-bar-item w3-button">Digital Levels</a>
+            <a href="#" class="w3-bar-item w3-button">Laser Scanners</a>
+            <a href="#" class="w3-bar-item w3-button">Solftwares</a>
+            <a href="#" class="w3-bar-item w3-button">Gis Collectors</a>
+            <a href="#" class="w3-bar-item w3-button">DISSTO</a>
+            
+        </div> 
+        </div>
+     <a href="Tech.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Technical Service</a>
+     <a href="cont.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
+       </div>
+      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    </div>
+  </div>
+
+  <div class="w3-display-container">
+    <img src="pic/img10.png" alt="Lights " style="width:100% ">
+    </div>
+
+<!--<header>
+  <h2>Cities</h2>
+</header>-->
+
+
+<section>
+  <nav>
+    <div class="w3-text-white">
+    <header>
+        <h3>GIS Co., Ltd.</h3>
+    </header>
+    <ul>
+      <h7><li><a class= " fa fa-map-marker">  Address
+<br>
+        202 CDG House, Nanglinchi Rd., Chongnonsee,  Yannawa Bangkok, 10120 Thailand</a></li> </h7>
+<br>
+      <h7><li><a class="fa fa-phone"> 0 2678 0707, 0 2678 0033 (Hotline)
+<br>
+        F: 0 2678 0321-3</a></li> </h7>
+        <br>
+     <h7><li><a class="fa fa-home" > gis.contact@cdg.co.th /</a></li> </h7> 
+      <br>
+      <div class="w3-row-padding w3-center">
+      <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="300" height="250" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10651.590162619874!2d100.53914461657638!3d13.70297949443043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f45a9458447%3A0x60690b9202361063!2sEsri%20Thailand!5e0!3m2!1sth!2sth!4v1706148088188!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="w3-container w3-white">
+</div>
+</div>
+
+  </nav>
+  
+  <header>
+    <b><h3>About US</h3></b>
+</header>
+<br>
+<article>
+    <p>GIS Co., Ltd. is the industry leader in providing Geographic Information System (GIS) – GIS One-Stop Services since 1991.    We provide system design consultation, GIS Software, Image Processing Software, Digital Base Mapping and Fields Surveys. Furthermore we also provide aerospace and satellite digital mapping services, analysis of IT infrastructure with installation of hardware and software as well as after-sales services.With reputable experiences of over 30 years in comprehensive products and Geospatial solutions, </p>
+    <p>GIS Co., Ltd. is an expert in Geospatial Solution acquiring , manipulate, and store geographic information in geographic information system – GIS technology which can provide various solutions to accommodate all business needs, such as site selection and analysis, logistics planning and solutions, and customized GIS application for specific uses of government agencies, state enterprises, educational institutions, independent agencies, and private corporations. The company also serves customers in the Indochina Region (CLMV), including Cambodia, Laos, Myanmar and Vietnam.</p>
+    <p>Additionally, GIS Co., Ltd. is an authorized distributor of Garmin Corporation Co., Ltd., the leader in GPS from the U.S., providing satellite navigation and a wide range of GPS products including Navigation for vehicles, GPS equipment for surveying, GPS handheld, Health wrist bands, Tacx Indoor Cycling and Smart Trainer for Indoor Cycling. And GIS Co.,Ltd. also an authorized distributor for sales and sole provider of after-sales service in Thailand for Leica Geosystems, the leader in survey equipment from Switzerland, providing surveying equipment with high resolution, such as Total Stations, GNSS Systems, level camera (Digital Level), Laser Scanner, Processor Software and GIS Collector.</p>
+<br>
+</article>
+
+   
+
+</section>
+<!--
+<footer>
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-black  width: 10%;
+    height: 5px;">
+    <p>Footer</p>
+  </footer>  -->
+   
+<!-- 
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us </span></div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jjBPj3eHoes?si=s4YQz9qgyNymB7ET" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <br>
+    
+      <h3>Address</h3>
+      <p>Swing by for a cup of coffee, or whatever.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
+    </div> -->
+</body>
+</html>
+    
